@@ -41,7 +41,52 @@ This cycle repeats from Step 1 → Step 8 → Step 1, continuously rotating the 
 
 
 
+## Servos
 
 
+### What is a Servo motor?
+To start, somethign I have alwasy foudn confusign is the differnece btween all the different types of servos. 
 
+1. Postitional Servos (Standard ones)
+as expeted these, when gives a speicfic postion or angle to move to they do exactly that. The hace internal feeback mechanis that tracks the psotion of the servo and continously mathces it the wanted psotion/angle. These typically workw ith PWM signals or pusle widht modulation sisginals wher ethe votlag pulse widht stermines the spotion fo the singal. for example
+-1ms pulse: moves 0 degress
+-1.5 pulse: moves 90 degreses
+-2ms pulse: moves 180 degrees
+Althoguh these are just limited to 180 degrees movemtn, they shien in their precsion. 
 
+2. COntinuous Roation Servos
+these unlike the postional servos rotate idneficndalty, like a motor. they use use sepped and direction control. they are also controleld by PWM.
+- A neutral PWM pulse (usually around 1.5ms) keeps the servo stationary (no rotation).
+- A pulse shorter than 1.5ms will make the servo rotate in one direction (typically clockwise).
+- A pulse longer than 1.5ms will make the servo rotate in the opposite direction (counter-clockwise).
+- The speed of the rotation is proportional to how far the pulse width deviates from 1.5ms.
+
+Common Servos and thier type:
+Positional
+- SG90
+- MG90S
+- MG996R
+- HS-422
+- Futaba S3003
+  
+Coninuous 
+- FS90R
+- SRF30
+
+### What is PWM
+PWM is a tehcnique that is used to create a varible based analog output from a digital singla. it is comonly used to control the sepedn or motors, birghtness of LEDS, and for servos. 
+
+It works tby creatign a digital sqaure wave that swtcihes from a high and lwo threshold/ Duty cyce refers to how long the ginsla stays high vs low in each cycle. 
+- 50% duty cycle: The signal is HIGH for half the time and LOW for the other half.
+- 25% duty cycle: The signal is HIGH for 25% of the time and LOW for 75%.
+- 100% duty cycle: The signal stays HIGH for the entire cycle (no LOW period).
+  
+Example of PWM for Controlling LEDs:
+- A 100% duty cycle will make the LED fully on.
+- A 50% duty cycle will make the LED appear dimmed, because it’s on half the time.
+- A 0% duty cycle will make the LED off (always LOW).
+
+Example of PWM for Controlling Motors:
+- A 100% duty cycle will run the motor at full speed.
+- A 50% duty cycle will run the motor at half speed.
+- A 0% duty cycle will stop the motor.
