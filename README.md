@@ -73,6 +73,13 @@ Coninuous
 - FS90R
 - SRF30
 
+## PCA9685 (PWM Driver IC)
+The PCA9685 is a PWM controller used to control multiple servos or LEDs with precise PWM. It’s commonly used in applications where you need to control many devices simultaneously without putting too much strain on the microcontroller.
+- The PCA9685 generates PWM signals using an internal clock and outputs them to the connected servos or LEDs.
+- Each PWM signal can be set to a different duty cycle (i.e., how long the signal stays high versus low in each cycle).
+- 16 Channels: It can control up to 16 independent PWM channels (e.g., for controlling 16 servos or LEDs), all using just 2 I2C pins from the microcontroller.
+- PWM Output: It generates pulse-width modulation (PWM) signals for each of its channels, which are used to control the speed or position of devices like servos or the brightness of LEDs.
+
 ## What is PWM
 PWM is a tehcnique that is used to create a varible based analog output from a digital singla. it is comonly used to control the sepedn or motors, birghtness of LEDS, and for servos. 
 
