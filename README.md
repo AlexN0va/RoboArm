@@ -100,3 +100,11 @@ Example of PWM for Controlling Motors:
 
 
 Note: OT open teh platoformio terminal do ctrl+shift+p and open PlatformIO Core CLI
+
+Resrouces:  
+(https://mischianti.org/doit-esp32-dev-kit-v1-high-resolution-pinout-and-specs/)
+https://randomnerdtutorials.com/esp32-stepper-motor-28byj-48-uln2003/
+https://cdn-learn.adafruit.com/downloads/pdf/16-channel-pwm-servo-driver.pdf
+https://www.instructables.com/A-Robotic-Arm-Based-on-Mg90s-Servos-and-28BYJ-48-S/ (cad files were fire)
+
+
