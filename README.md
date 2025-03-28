@@ -97,3 +97,6 @@ Example of PWM for Controlling Motors:
 - A 100% duty cycle will run the motor at full speed.
 - A 50% duty cycle will run the motor at half speed.
 - A 0% duty cycle will stop the motor.
+
+
+Note: OT open teh platoformio terminal do ctrl+shift+p and open PlatformIO Core CLI
