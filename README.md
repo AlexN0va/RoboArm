@@ -73,7 +73,7 @@ Coninuous
 - FS90R
 - SRF30
 
-### What is PWM
+## What is PWM
 PWM is a tehcnique that is used to create a varible based analog output from a digital singla. it is comonly used to control the sepedn or motors, birghtness of LEDS, and for servos. 
 
 It works tby creatign a digital sqaure wave that swtcihes from a high and lwo threshold/ Duty cyce refers to how long the ginsla stays high vs low in each cycle. 
