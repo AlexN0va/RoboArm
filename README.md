@@ -18,7 +18,7 @@ A stepper motor s a type of DC mtoor that moves in little steps. It ha electroma
 What sets a stepper mtoro apart from other motors is it prescision. Typical stepper motors have 200 steps to make a full rotation. you can literly control each step! Note: Stator is the stationary part of the motor. it doesnt move, but it creates the magnetic field which moves the rotor. Brushelss adn brushed motor follwo similar prociples. Stepper motros are often used in printers, 3d pritners, robotics, adn cnc machines. 
 
 
-### **🔍 Differences in a Nutshell**
+### Stepper Motor vs Brushless vs Brushed
 | Feature                    | Stepper Motor                             | Brushed DC Motor                  | Brushless DC Motor (BLDC)               |
 |----------------------------|-------------------------------------------|-----------------------------------|----------------------------------------|
 | **Type of Rotation**        | Discrete steps (step-by-step)             | Continuous rotation               | Continuous rotation                   |
