@@ -98,6 +98,20 @@ Example of PWM for Controlling Motors:
 - A 50% duty cycle will run the motor at half speed.
 - A 0% duty cycle will stop the motor.
 
+## ESP32 Webserver and wifi
+When we connectec our ESP32 to our wifi, the router gives ti a local (pricate t your pwifi) IP adress/ This adress is only aceesable from within your wifi connection. A little backgroudn on routres. Our rouyou searhc soemthign up you use that public ip adress. ter acts liek the middleman between all the devices in our home/ wifi connection adn the internet. It assigns priavet ip adresses to our devices, liek the esp32, within our wifi connection. However, the router have a internet facing public Ip that reprsetns all the devices. 
+
+Workflow: 
+lets say my laptop goes to google.com, I am actually sending a request to the praivete ip adress of my router. my router then repalces my latoptops private ip adress with its public ip adress. google.com receives the get request and sees the public ip adress from the router. This is called NAT. Netwrok Adress Trnaltion. 
+
+Why can I only acess the webpage or ip adress o the ESP32 within my wifi connection? 
+Liek I said before all our deiveces within our home have priavte ip adresses, that can only be accessed by poeple within your local wifi networl. Your router blocks, theoguh a firewall, all the exrpeinal devices from accessing the internal devices and their priavte ip adressses. 
+
+If I Did want to be abel to acess my ESP32 anywherer, I could use port forwarding, and tel lmy router to diabsle all the security measurers for that specicif esp32 private ip adress and let nayone cess it. of coures that poses secuirty threats. 
+
+What is a more scalable approach. NOt use a ESP32 at all and use a raspeberry pi! But in this case if I didnt want to scale this project a bit more I could have a web app hosted on a rspberry pi. Then our esp32 ocnncted to the web app, and subrcirebes to us throguh MQTT and listens in for data.
+
+
 
 Note: OT open teh platoformio terminal do ctrl+shift+p and open PlatformIO Core CLI
 
