@@ -5,12 +5,12 @@
 Just when I was cleanign out some electrocnics I had, I realized that I had a pwm servo driver. I don't knwo where how it got in my electronics box, but with that my journey began on bulindg a robot arm with some servos and stepper motor. I've been wanting to create a robot arm for a long time,a dn thsi will be a ever gogin project, but we will begin with this v1 of RoboArm. 
 
 ## Materials 
-ESP32DevKitv1
-PWM Servo Driver
-Stepper Motor Driver. 
+- ESP32DevKitv1
+- PWM Servo Driver
+- Stepper Motor Driver. 
 
 
-# Stepper Motor
+## Stepper Motor
 
 ### What is a Stepper motor?
 A stepper motor s a type of DC mtoor that moves in little steps. It ha electromagnteic coils that creates a magentic field that moves the rotor little by little when we apply a voltage. Of crouse we control that ovltage with the GPIO pins ocnnceted to teh esp32
@@ -29,28 +29,17 @@ What sets a stepper mtoro apart from other motors is it prescision. Typical step
 | **Cost**                    | Moderate to high (due to precise control) | Low                               | Higher (due to complex controller)     |
 | **Common Uses**             | CNC machines, robotics, 3D printers        | Toys, fans, power tools           | Drones, electric vehicles, computers   |
 
----
+### Within my code
 
-### **Why Choose One Over the Other?**
-- **Stepper Motors** are great when you need precise **position control** in an **open-loop system** (no feedback needed).
-- **Brushed DC Motors** are cheap and simple, making them ideal for simple applications like toys or small appliances.
-- **Brushless DC Motors (BLDC)** are the go-to for high-efficiency, **high-performance** applications like **electric vehicles** or **drones**.
+{1, 0, 0, 0} → Only IN1 is ON
 
+{1, 1, 0, 0} → Now IN1 & IN2 are ON
 
-🌀 How It Works Inside
-The stator is made up of multiple electromagnetic coils arranged in a circle.
+{0, 1, 0, 0} → Only IN2 is ON
 
-The rotor is a permanent magnet (or has soft iron teeth).
+{0, 1, 1, 0} → IN2 & IN3 are ON
 
-When you energize a coil, it creates a magnetic field that attracts the rotor.
-
-By turning the coils on and off in sequence, you pull the rotor step by step into position.
- ## How my code works
-🔄 Stepper Motor in Action
-1️⃣ Turn on Coil A → The rotor aligns with Coil A.
-2️⃣ Turn off Coil A, turn on Coil B → The rotor moves to align with Coil B.
-
-
+This cycle repeats from Step 1 → Step 8 → Step 1, continuously rotating the motor.
 
 
 
