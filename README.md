@@ -115,6 +115,16 @@ What is a more scalable approach. NOt use a ESP32 at all and use a raspeberry pi
 
 Note: OT open teh platoformio terminal do ctrl+shift+p and open PlatformIO Core CLI
 
+## Web app
+
+### WebServer Library (synchronous)
+this sit he defaut web server library thart is included in the arduino library. it ahdnles each lcient rewuest one by one. each request mystbe fullyly precocess and must have a response befoer the next one can be hanfled. simple to implement, but at times this may not work fro what is needed. 
+
+### ESPAsycnWebServer Lirbary (asynchromous) (waht I use) 
+uses event driven approach. can hanfle multiple client connections simultatieoslt wihtout waiting fro each on eto end. uses AsynTCP, whcihc allwos on blcoking TCP operationrs. ASycTCP uses callbacks to handle events when data is ready. this prevents the esp to be waiting on network operations. it creacts a asynchronouse tcp connection. instead of waiting for respisne, it just registers callback mfunctions. when data is recires callback function is triggered to rpocess it. allwoesp32 to predom murltiple tasks while prefomring other taks . 
+
+### Reaclall TCP: communciation prtocal sued for relaiable, orded and errorchaed data over network. a connections between teo devices ins needed before data is sent. ensure all packets are delivered in the correct order. uses ACKs error chekcing  dta is sent in continouse streams. How TCP works. there is a handshake. Dta is borkcen into peaceis adn sent, and must get s repsoen or acknowldegment. This is typical TCP that requires a acklognsmdent before sending more data. byt ascynchrounous TCP ahndles communcaiton withotu blokcing. inctead of waiting for the acknwoldegemtn, asynchronuos uses event-drinven programming with callback fucntions. we give the hanlder a fucntion to call when ready, all while toher parts of the code are running. "Asynchronous code registers callbacks (functions that run when an operation is complete). The program can continue running other tasks while waiting for the response."
+
 Resrouces:  
 (https://mischianti.org/doit-esp32-dev-kit-v1-high-resolution-pinout-and-specs/)
 https://randomnerdtutorials.com/esp32-stepper-motor-28byj-48-uln2003/
