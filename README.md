@@ -3,13 +3,17 @@
 ## Introduction
 Just when I was cleaning out some electronics I had, I realized that I had a PWM servo driver. I don't know how it got in my electronics box, but with that, my journey began on building a robot arm with some servos and a stepper motor. I've been wanting to create a robot arm for a long time, and this will be an ever-going project, but we will begin with this v1 of RoboArm. I'm on my spring break right now, and I should probably be studying for my midterms, but idk. Also Fire name. Prof Leanard is clutch.
 
-## videos of Arm 
-https://drive.google.com/file/d/1m0qkAVLnr70fH3fg_FS3zVIJAYr3Hk6P/view?usp=sharing
-
 ## Materials 
 - ESP32DevKitv1
 - PWM Servo Driver
 - Stepper Motor Driver
+
+## Log 
+This project is a work in progress, and I’m excited to continue developing it. Stay tuned for updates!
+TODO:
+- continue wokring on web app
+- glue arms together for more stability
+- make a better arm!!!!
 
 ## Stepper Motor
 
@@ -127,5 +131,6 @@ TCP (Transmission Control Protocol) ensures reliable and ordered data transmissi
 - Uses acknowledgments (ACKs) to confirm data delivery.
 - Asynchronous TCP doesn’t wait for acknowledgments; instead, it uses **callbacks** to handle events efficiently.
 
-This project is a work in progress, and I’m excited to continue developing it. Stay tuned for updates!
 
+## Videos of Arm 
+https://drive.google.com/file/d/1m0qkAVLnr70fH3fg_FS3zVIJAYr3Hk6P/view?usp=sharing
