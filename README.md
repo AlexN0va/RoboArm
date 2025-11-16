@@ -134,3 +134,7 @@ TCP (Transmission Control Protocol) ensures reliable and ordered data transmissi
 
 ## Videos of Arm 
 https://drive.google.com/file/d/1m0qkAVLnr70fH3fg_FS3zVIJAYr3Hk6P/view?usp=sharing
+
+## Resources and Credit
+
+https://www.instructables.com/A-Robotic-Arm-Based-on-Mg90s-Servos-and-28BYJ-48-S/ - the original robotic arm cad files
